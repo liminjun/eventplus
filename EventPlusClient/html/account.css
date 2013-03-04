@@ -1,0 +1,38 @@
+﻿.account section[role=main] {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .account section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .account section[role=main] {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+.account p {
+    margin-left: 120px;
+}
+
+.SettingsPane {
+    margin-top:36px;
+    margin-left:48px;
+}
+
+.SettingsTitle {
+    margin-left: 36px;
+}
+
+.SettingsContent {
+     margin-top: 24px;
+}
+#account {
+      background-color: #a8cdf7; 
+}

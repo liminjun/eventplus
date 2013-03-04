@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>groupedItemsPage</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <!--Live SDK-->
+    <script src="///LiveSDKHTML/js/wl.js"></script
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/groupedItems/groupedItems.css" rel="stylesheet" />
+    
+    <script src="/js/data.js"></script>
+    <!--<script src="../../js/Delegation.js"></script>-->
+    <script src="/pages/groupedItems/groupedItems.js"></script>
+</head>
+<body>
+    <!-- These templates are used to display each item in the ListView declared below. -->
+    <div class="headertemplate" data-win-control="WinJS.Binding.Template">
+        <button class="group-header win-type-x-large win-type-interactive" data-win-bind="groupKey: key"
+            onclick="Application.navigator.pageControl.navigateToGroup(event.srcElement.groupKey)" role="link" tabindex="-1" type="button">
+            <span class="group-title win-type-ellipsis" data-win-bind="textContent: title"></span>
+            <span class="group-chevron"></span>
+        </button>
+    </div>
+    <div class="itemtemplate" data-win-control="WinJS.Binding.Template">
+        <div class="item">
+            <input type="hidden" data-win-bind="value:eventid"/>
+            <img class="item-image" src="#" data-win-bind="src: backgroundImage; alt: title" />
+            <div class="item-overlay">
+                <h4 class="item-name">名称:</h4><h4 class="item-title" data-win-bind="textContent: title"></h4>
+                <h6 class="item-date" >日期:</h6><h6 class="item-subtitle win-type-ellipsis" data-win-bind="textContent: eventdate"></h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment groupeditemspage" style="height: 334.69px;">
+        <header aria-label="Header content" role="banner" style="padding-left:10%; ">
+            <!--首页不需要返回按钮-->
+            <!--<button class="win-backbutton" aria-label="Back" disabled type="button"></button>-->
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">活动管家-轻松管理您的活动!</span>
+				<span id="loginStatus">Guest</span>
+                <!--<input type="button" value="登录" id="signInButton" name="loginbtn"/>-->
+
+                <img src="/images/user.png" id="userPicture"/>
+            </h1>
+        </header>
+        <section style="width:100%;" aria-label="Main content" role="main">
+            <!--<div id="statusMessage"></div>-->
+            <div id="groupedItemList" class="groupeditemslist win-selectionstylefilled" aria-label="List of groups" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'single', tapBehavior:'toggleSelect',swipeBehavior:'select' }"></div>
+        </section>
+        <!--<div id="resultText"></div>-->
+    </div>
+</body>
+</html>

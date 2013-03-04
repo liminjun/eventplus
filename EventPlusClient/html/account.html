@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>账户设置</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <!--Live SDK-->
+    <script src="///LiveSDKHTML/js/wl.js"></script>
+
+    <link href="account.css" rel="stylesheet" />
+    <script src="account.js"></script>
+</head>
+<body>
+    <div id="account" data-win-control="WinJS.UI.SettingsFlyout" data-win-options="{width: 'narrow'}">
+    <div class="SettingsPane">
+        <div class="win-label">
+            <button onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton">
+            </button>
+            <span class="SettingsTitle">账户</span>
+        </div>
+        <article class="SettingsContent">
+            <p id="usernameDisplay"></p>
+        </article>
+        <div>
+            <!-- Define one button to sign in and another to sign out, but only show          -->
+            <!-- one at a time, depending on whether the user is currently signed in or not.  -->
+            <button id="signin" onclick="onSignInTap();" style="display:none">登录</button>
+            <button id="signout" onclick="onSignOutTap();" style="display:none">注销</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

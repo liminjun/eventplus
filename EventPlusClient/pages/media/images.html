@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>images</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="images.css" rel="stylesheet" />
+    <script src="images.js"></script>
+    <!--<script src="/js/dataExample.js"></script>-->
+</head>
+<body>
+    <div class="images fragment">
+        <header aria-label="Header content" role="banner" style="padding-left:10%;">
+            <button style="margin-top:30px;" class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">欢迎进入图片集</span>
+            </h1>
+        </header>
+        <div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template">
+            <div style="width:150px;height:150px; text-align:center;background-color:#fff;">
+                <img src="#"  style="width:100px;height:100px;" data-win-bind="alt:text;src:mediapath"/>
+                <div>
+                    <!--Display the "text" field.-->
+                    <h6 class="smallItemTitle" data-win-bind="innerText:text"></h6>
+                </div>
+            </div>
+        </div>
+        <section aria-label="Main content" role="main" style="height: 422.9px;">
+            <!--FlipView-->
+            <!--ItemTemplate-->
+        <div id="simple_ItemTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+            <div class="overlaidItemTemplate">
+                <img class="image" data-win-bind="src: mediapath; alt: text" />
+                <div class="overlay">
+                    <h2 class="ItemTitle" data-win-bind="innerText: text"></h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="basicFlipView" class="flipView"
+            data-win-control="WinJS.UI.FlipView"
+            data-win-options="{itemTemplate:select('#simple_ItemTemplate') }">
+        </div>
+
+            <!--ListView Container-->
+            <div id="imagesListView"
+                data-win-control="WinJS.UI.ListView" data-win-options="{ 
+                itemTemplate:select('#mediumListIconTextTemplate')
+                 }">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

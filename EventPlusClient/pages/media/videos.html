@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>videos</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="videos.css" rel="stylesheet" />
+    <script src="videos.js"></script>
+</head>
+<body>
+    <div class="videos fragment">
+        <header aria-label="Header content" role="banner" style="padding-left: 10%;">
+            <button style="margin-top: 30px;" class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">欢迎进入视频集</span>
+            </h1>
+        </header>
+        <!--ListView template-->
+        <div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template">
+            <div style="width: 150px; height: 150px; text-align: center; background-color: white;">
+                <img src="/images/videoplaceholder.png" style="width: 100px; height: 100px;" />
+                <div>
+                    <!--Display the "text" field.-->
+                    <h6 class="smallItemTitle" data-win-bind="innerText:text"></h6>
+                </div>
+            </div>
+        </div>
+        <section aria-label="Main content" role="main">
+            <video id="subtitleVideo" style="position: relative; z-index: auto; width: 50%;"
+                src="" poster="images/videoposter.png" loop controls>
+            </video>
+
+            <!--View ListView-->
+            <div id="videosListView"
+                data-win-control="WinJS.UI.ListView" data-win-options="{ 
+                itemTemplate:select('#mediumListIconTextTemplate')
+                 }">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

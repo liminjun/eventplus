@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9ee3ba23-05ba-402a-a8b6-f3281c3f8b2c}</ProjectGuid>
+  </PropertyGroup>
+  <Import Condition="Exists('$(MSBuildExtensionsPath32)\$(MSBuildToolsVersion)\Microsoft.Common.props')" Project="$(MSBuildExtensionsPath32)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <PackageCertificateThumbprint>DDF0D2D9980BE88025CFCCB177FD900721B9412D</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <PackageCertificateKeyFile>EventPlus_StoreKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-180.png" />
+    <Content Include="Assets\SplashScreen.scale-100.jpg" />
+    <Content Include="Assets\StoreLogo.scale-180.png" />
+    <Content Include="Assets\WideLogo.scale-100.png" />
+    <Content Include="default.html" />
+    <None Include="EventPlus_StoreKey.pfx" />
+    <Content Include="events-theme\birthday.png" />
+    <Content Include="events-theme\cook.png" />
+    <Content Include="events-theme\other.png" />
+    <Content Include="events-theme\sports.png" />
+    <Content Include="events-theme\thanksgiving_falltrees.jpg" />
+    <Content Include="events-theme\travel.png" />
+    <Content Include="events-theme\weddings.png" />
+    <Content Include="html\About.html" />
+    <Content Include="html\account.css" />
+    <Content Include="html\account.html" />
+    <Content Include="html\account.js" />
+    <Content Include="html\appsettings.html" />
+    <Content Include="html\privacy.css" />
+    <Content Include="html\privacy.html" />
+    <Content Include="images\assets\bg.jpg" />
+    <Content Include="images\assets\Logo.png" />
+    <Content Include="images\assets\SmallLogo.png" />
+    <Content Include="images\assets\SplashScreen.jpg" />
+    <Content Include="images\assets\StoreLogo.png" />
+    <Content Include="images\assets\WideLogo.png" />
+    <Content Include="images\EventFail.png" />
+    <Content Include="images\EventSuccess.png" />
+    <Content Include="images\event_end.gif" />
+    <Content Include="images\event_start.png" />
+    <Content Include="images\gallery.jpg" />
+    <Content Include="images\movies.gif" />
+    <Content Include="images\single_event.png" />
+    <Content Include="images\single_event_end.png" />
+    <Content Include="images\user.png" />
+    <Content Include="images\videoplaceholder.png" />
+    <Content Include="images\videoposter.png" />
+    <Content Include="js\data.js" />
+    <Content Include="js\default.js" />
+    <Content Include="js\navigator.js" />
+    <Content Include="js\Utils.js" />
+    <Content Include="pages\search\searchResults.css" />
+    <Content Include="pages\search\searchResults.html" />
+    <Content Include="pages\search\searchResults.js" />
+    <None Include="Package.StoreAssociation.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="pages\events\addEvent.css" />
+    <Content Include="pages\events\addEvent.html" />
+    <Content Include="pages\events\addEvent.js" />
+    <Content Include="pages\groupDetail\groupDetail.css" />
+    <Content Include="pages\groupDetail\groupDetail.html" />
+    <Content Include="pages\groupDetail\groupDetail.js" />
+    <Content Include="pages\groupedItems\groupedItems.css" />
+    <Content Include="pages\groupedItems\groupedItems.html" />
+    <Content Include="pages\groupedItems\groupedItems.js" />
+    <Content Include="pages\itemDetail\itemDetail.css" />
+    <Content Include="pages\itemDetail\itemDetail.html" />
+    <Content Include="pages\itemDetail\itemDetail.js" />
+    <Content Include="pages\media\images.css" />
+    <Content Include="pages\media\images.html" />
+    <Content Include="pages\media\images.js" />
+    <Content Include="pages\media\videos.css" />
+    <Content Include="pages\media\videos.html" />
+    <Content Include="pages\media\videos.js" />
+    <Content Include="css\default.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="LiveSDKHTML, Version=5.0" />
+    <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="stringResources\ServerURL.resjson" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+</Project>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="48539Pactera.com.8934CBF8A6D0" Version="1.0.0.19" Publisher="CN=CD610031-25E3-44F4-A0B1-B91319359984" />
+  <Properties>
+    <DisplayName>活动管家</DisplayName>
+    <PublisherDisplayName>Pactera.com</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Resources>
+    <Resource Language="zh-cn" />
+  </Resources>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="活动管家" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="活动管家，轻松组织和管理您的活动安排。" ForegroundText="light" BackgroundColor="#00b2f0" ToastCapable="false">
+        <DefaultTile ShortName="EventPlus" ShowName="allLogos" WideLogo="Assets\WideLogo.png" />
+        <SplashScreen Image="Assets\SplashScreen.jpg" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+        </InitialRotationPreference>
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" StartPage="default.html" />
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="privateNetworkClientServer" />
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

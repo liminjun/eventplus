@@ -1,0 +1,27 @@
+﻿<!doctype HTML>
+<html>
+    <head>
+        <title>账户设置</title>
+    </head>
+    <body>
+        <!-- BEGINSETTINGSFLYOUT -->
+        <div id="settingsDiv" data-win-control="WinJS.UI.SettingsFlyout" aria-label="App Settings Flyout" data-win-options="{width:'narrow'}">
+            <div class="win-header" style="background-color:#7db3f3;">
+                <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton"></button>
+                <div class="win-label">账户设置</div>
+                
+            </div>
+            <div class="win-content">
+                <div id="signOut" class="item">
+                    <div class="item" style="display: block;">您可以从应用程序退出，使用其他的Microsoft帐户登录。</div>
+                    <button  class="item" style="display: block;" id="signOutButton" onclick="SdkSample.signOut(); this.style.display='none';">注销</button>
+                </div>
+                <div id="cannotSignOut" class="item">
+                    <div  class="item" style="display: none;">您可以在PC设置中管理您的帐户</div>
+                </div>
+
+            </div>
+            </div>
+        <!-- ENDSETTINGSFLYOUT -->
+    </body>
+</html>

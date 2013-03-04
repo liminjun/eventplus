@@ -1,0 +1,88 @@
+﻿
+.addEvent header{
+	margin-left:10%;
+}
+.addEvent p {
+    margin-left: 120px;
+}
+#eventContainer{
+	width:500px;
+	margin:0;
+    float:left;
+}
+#eventContainer h2{
+	margin:10px;
+    color:green;
+}
+#eventContainer label {
+    font-size:16px;
+    font-family:'Segoe UI';
+    color:green;
+    font-weight:bold;
+}
+#eventContainer input{
+	width:496px;
+    float:left;
+}
+.buttonContainer{
+	margin-top:20px;
+}
+#eventContainer .btnClass{
+	width:50%;
+    color:green;
+    background-color:rgba(125, 179, 243, 0.95);
+    cursor:pointer;
+}
+label {
+    display:block;
+}
+#eventContainer input#friendsmail {
+    float:left;
+}
+.textDetail{
+    clear:both;
+}
+.validationtext {
+    height:24px;
+    width:500px;
+    line-height:24px;
+    vertical-align:middle;
+    color:red;
+    float:left;
+    display:none;
+}
+#resultcontainer {
+    clear:both;
+    position:relative;
+    top:-400px;
+    left:150px;
+    width:180px;
+}
+#resultText {
+    width:180px;
+    height:160px;
+    /*background-image:url('../../images/EventSuccess.png');*/
+    background-repeat:no-repeat;
+}
+
+/*The style of theme images*/
+#themeContainer {
+    width:1000px;
+    margin:0 auto;
+}
+#themeImages .themeTitle {
+    font-family:'Segoe UI';
+    font-size:16px;
+}
+#themeImages {
+    width:500px;
+    float:left;
+}
+#themeImagesListView {
+    width:500px;
+    float:right;
+}
+#themeImages h2{
+	margin:10px;
+    color:green;
+}

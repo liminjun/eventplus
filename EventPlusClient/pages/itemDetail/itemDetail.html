@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>itemDetailPage</title>
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/itemDetail/itemDetail.css" rel="stylesheet" />
+    <script src="/js/Utils.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/pages/itemDetail/itemDetail.js"></script>
+</head>
+<body style="height: 100%; clear: both;">
+    <!-- The content that will be loaded and displayed. -->
+    <div class="itemdetailpage fragment">
+        <header aria-label="Header content" role="banner" style="margin-top: 0px; padding-left: 9%;">
+            <button style="margin-top: 30px;" class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle"></span>
+            </h1>
+        </header>
+        <div class="content" aria-label="Main content" role="main">
+            <article>
+                <div>
+                    <header>
+                        <h2 class="item-title"></h2>
+                    </header>
+                    <img class="item-image" src="#" />
+                    <div class="greenTitle">活动日期:</div>
+                    <div class="item-subtitle"></div>
+                    <br />
+                    <div class="greenTitle">活动详情:</div>
+                    <div class="item-content"></div>
+                </div>
+            </article>
+        </div>
+        <div class="rightcontent" aria-label="Images Video content" role="main" style="height: 830.12%; left: 0px; top: 0px;">
+            <section id="gallery">
+                <h4>图片集</h4>
+                <div id="galleryplaceholder">
+                    <img src="../../images/gallery.jpg" alt="gallery placeholder" title="gallery container" />
+                </div>
+            </section>
+            <section id="videos">
+                <h4>视频集</h4>
+                <div id="videosplaceholder">
+                    <img src="../../images/movies.gif" alt="videos placeholder" title="video container" />
+                </div>
+            </section>
+        </div>
+
+        
+
+        <div id="tipFlyout" data-win-control="WinJS.UI.Flyout" style="top: 300px;">
+            <p>当前活动还没有结束哦!</p>
+            <input type="button"  value="取消" />
+        </div>
+        <!--图片或视频描述对话框-->
+        <div id="descriptionFlyout" data-win-control="WinJS.UI.Flyout" style="width:300px;text-align:center; border:none;background-color:#7db3f3;">
+            <h5 style="width:300px;">照片/视频描述</h5><br />
+            <div class="leftpanel">
+                <input id="mediadescription" placeholder="这里添加描述!" style="width:200px;"/>
+            </div>
+            <br /><br />
+            <div class="buttoncontainer">
+                <input id="btndescOK" type="button" value="确定" />&nbsp;&nbsp;&nbsp;&nbsp;<input id="btndescCancel" type="button" value="取消" />
+            </div>
+        </div>
+        <div id="informationFlyout" data-win-control="WinJS.UI.Flyout" style="width:300px; height:50px; text-align:center; border:none;background-color:#7db3f3;">
+            <p>文件正在上传中...</p>
+        </div>
+
+        <div id="flyoutAnchor"></div>
+    </div>
+</body>
+</html>

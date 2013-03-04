@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>addEvent</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/pages/events/addEvent.css" rel="stylesheet" />
+    <script src="../../js/data.js"></script>
+    <script src="addEvent.js"></script>
+</head>
+<body>
+    <div class="addEvent fragment">
+        <header aria-label="Header content" role="banner">
+            <button style="margin-top: 30px;" class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">创建活动</span>
+            </h1>
+        </header>
+        <div id="themeContainer">
+        <section aria-label="Main content" role="main" id="eventContainer">
+            <h2>创建活动:</h2>
+            <img id="themeImageSrc" src="/events-theme/birthday.png" alt="event theme"" />
+            <form id="formContainer" onsubmit="return false;">
+                <div class="textDetail">
+                    <label for="eventTitle">活动标题:</label>
+                    <input id="eventTitle" type="text" style="height: 28px;" placeholder="我的生日晚会(必填)" />
+                    <div class="validationtext" id="eventTitleValidation" style="color: red;"></div>
+                </div>
+                <div class="textDetail">
+                    <label for="eventDate">活动日期:</label>
+                    <input id="eventDate" type="text" placeholder="02/02/0213" />
+                    <div id="divDatePicker"></div>
+                    <div class="validationtext" id="dateValidation" style="color: red;"></div>
+                </div>
+                <div class="textDetail">
+                    <label for="eventTime">活动时间:</label>
+                    <input id="eventTime" type="text" placeholder="10:00:00 AM" />
+                    <div id="divTimePicker"></div>
+                    <div class="validationtext" id="timeValidation" style="color: red;"></div>
+                </div>
+                <div class="textDetail">
+                    <label for="eventPosition">活动地点:</label>
+                    <input id="eventPosition" type="text" placeholder="南京东路235号(必填)" />
+                    <div class="validationtext" id="eventPositionValidation" style="color: red;"></div>
+                </div>
+                <div class="textDetail">
+                    <label for="eventDesc">活动详情</label>
+                    <input id="eventDesc" type="text" placeholder="我的22岁生日，希望大家一起来我家庆祝(必填)" />
+                    <div class="validationtext" id="eventDescValidation" style="color: red;"></div>
+                </div>
+                <div class="textDetail">
+                    <label for="friendsmail">邀请好友:</label>
+                    <input id="friendsmail" type="text" placeholder="邀请好友(输入电子邮件地址，以英文分号隔开)" />
+                    <br />
+                    <div class="validationtext" id="friendsmailValidation" style="color: red;"></div>
+                </div>
+
+                <div class="buttonContainer">
+                    <input id="btnsubmit" class="btnClass" type="submit" value="邀请" />
+                    <input class="btnClass" type="reset" value="取消" />
+                </div>
+            </form>
+        </section>
+
+        <section id="themeImages">
+            <h2>更换主题:</h2>
+            <!--Theme Image Template-->
+            <div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template">
+                <div style="background-color: white;">
+                    <h6 class="themeTitle" data-win-bind="innerText:title"></h6>
+                    <img src="#" style="width: 496px; height: 147px;" data-win-bind="src:picture;alt:title" />
+                </div>
+            </div>
+            <!--Theme Images List-->
+            <div id="themeImagesListView"
+                data-win-control="WinJS.UI.ListView" data-win-options="{
+                itemDataSource:EventPlusData.itemList.dataSource, 
+                itemTemplate:select('#mediumListIconTextTemplate'),
+                layout:{type:WinJS.UI.ListLayout}
+                 }" style="height:515px;">
+            </div>
+        </section>
+
+        <section aria-label="Result content" id="resultcontainer">
+            <div id="resultText"></div>
+        </section>
+        <section>
+            <div id="informationFlyout" data-win-control="WinJS.UI.Flyout" style="top: 300px;">
+                <p style="color: red;">好友列表不能为空</p>
+                <input type="button" value="确定" />
+            </div>
+            <div id="flyoutAnchor" style="height: 50px;"></div>
+        </section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿.videos section[role=main] {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .videos section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .videos section[role=main] {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+#subtitleVideo {
+    display:none;
+    margin:0 auto;
+    width: 50%;
+}
+.win-listview .win-item:hover {
+    cursor:pointer;
+}
+#videosListView {
+    height:180px;
+    margin:50px 10px;
+}
+.overlaidItemTemplate .overlay .ItemTitle
+{
+    color: rgba(114, 208, 246, 0.85);
+}
+.smallItemTitle {
+    color:#72d0f6;
+    font-family:'Segoe UI';
+    font-size:16px;
+}
